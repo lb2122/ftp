@@ -113,7 +113,7 @@ public class FTP {
 					throw new IOException("Simple FTP was not allowed to send the file:" + s);  
 				} 
 				BufferedInputStream input = new BufferedInputStream(inputStream);
-				BufferedOutputStream output = new BufferedOutputStream(DataSocket.getOutputStream()); 
+				BufferedOutputStream output = new BufferedOutputStream(dataSocket.getOutputStream()); 
 				byte[] buffer = new byte[4096]; 
 				int bytesRead = 0; 
 				while ((bytesRead = input.read(buffer)) != -1) { 
